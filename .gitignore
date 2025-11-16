@@ -1,0 +1,10 @@
+﻿# Ignore Office temp and cache files
+~$*.docx
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
