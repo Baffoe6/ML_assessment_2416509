@@ -67,7 +67,13 @@ Data Quality
 - Missing Values: Handled using median imputation
 - Feature Scaling: Standardized using StandardScaler (mean=0, std=1)
 - Train-Test Split: 80% training, 20% testing with stratified sampling
+- Cross-Validation: 10-fold stratified cross-validation for robust performance estimation
 - Class Balance: Verified to ensure representative distribution
+
+Exploratory Data Analysis
+- Correlation Heatmap: Visualizes feature relationships and identifies highly correlated pairs
+- Feature Distributions: Histograms for all 30 numerical features
+- Statistical Summary: Comprehensive descriptive statistics for each feature
 
 ---
 
@@ -122,6 +128,12 @@ Weaknesses:
 - Slower prediction time than linear models
 - Memory intensive
 
+Feature Importance Analysis:
+- Comparative analysis across all 3 Random Forest configurations
+- Top 15 most important features visualized
+- Identifies most predictive features for malignancy classification
+- Quantifies feature contribution percentages
+
 ---
 
 3. Multi-Layer Perceptron (Neural Network)
@@ -155,6 +167,12 @@ Weaknesses:
 - Prone to overfitting
 - "Black box" - difficult to interpret
 - Sensitive to initialization and hyperparameters
+
+Training Analysis:
+- Loss curves visualized for all 3 architectures
+- Convergence monitoring with early stopping
+- Training dynamics analysis showing learning behavior
+- Epoch-by-epoch loss reduction tracking
 
 ---
 
@@ -259,12 +277,21 @@ Model Performance Comparison
 
 Visualizations Included
 
-The notebook generates the following visualizations for each model:
+The notebook generates the following visualizations:
 
-1. Confusion Matrix: Shows true positives, false positives, true negatives, and false negatives
-2. ROC Curve: Plots true positive rate vs false positive rate
-3. Comparison Charts: Bar charts comparing all models across metrics
-4. Combined ROC Plot: All 9 models' ROC curves on one plot
+Exploratory Data Analysis:
+1. Correlation Heatmap: Feature relationships with highly correlated pairs identification
+2. Feature Distributions: Histograms for all 30 numerical features
+
+Model Performance:
+3. Confusion Matrices: True positives, false positives, true negatives, false negatives for all 9 models
+4. ROC Curves: True positive rate vs false positive rate with AUC scores
+5. Comparison Charts: Bar charts comparing all models across accuracy, F1-score, ROC-AUC
+6. Combined ROC Plot: All 9 models' ROC curves on one plot
+
+Model-Specific Analysis:
+7. Random Forest Feature Importance: Top 15 features across 3 configurations
+8. Neural Network Loss Curves: Training convergence for 3 architectures
 
 Model Selection Guidelines
 
@@ -354,11 +381,10 @@ Suggestions for Improvement
 
 3. Evaluation Enhancements
 
-- Cross-Validation:
-  - Implement k-fold cross-validation (k=5 or 10)
-  - Use stratified k-fold for class balance
-  - Calculate confidence intervals for metrics
-  - Report mean and standard deviation across folds
+- Cross-Validation: ✅ IMPLEMENTED
+  - 10-fold stratified cross-validation implemented for all 9 models
+  - Mean and standard deviation reported for each model
+  - Generalization performance validated across multiple folds
 
 - Additional Metrics:
   - Precision and Recall for each class
