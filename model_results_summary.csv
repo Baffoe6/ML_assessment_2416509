@@ -1,0 +1,10 @@
+Model_Type,Configuration,Accuracy,F1_Score,ROC_AUC,True_Negatives,False_Positives,False_Negatives,True_Positives
+Logistic Regression,"1 (L2, C=1.0)",1.0,1.0,1.0,72,0,0,42
+Logistic Regression,"2 (L1, C=0.5)",1.0,1.0,1.0,72,0,0,42
+Logistic Regression,"3 (L2, C=10.0)",1.0,1.0,1.0,72,0,0,42
+Random Forest,"1 (n=100, depth=10)",1.0,1.0,1.0,72,0,0,42
+Random Forest,"2 (n=200, depth=20)",1.0,1.0,1.0,72,0,0,42
+Random Forest,"3 (n=50, depth=5)",1.0,1.0,1.0,72,0,0,42
+Neural Network,1 (50),0.9824561403508771,0.9823623542652152,0.9990079365079365,72,0,2,40
+Neural Network,2 (100-50),1.0,1.0,1.0,72,0,0,42
+Neural Network,3 (150-100-50),0.9824561403508771,0.9823623542652152,0.9986772486772487,72,0,2,40
